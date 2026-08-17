@@ -1,4 +1,2 @@
-1
-5 5
-1 2 3 2 1
-1 2 5 2 3
+This_is_a_[Beiju]_text
+[[]][][]Happy_Birthday_to_Tsinghua_University
