@@ -17,15 +17,18 @@
  * un integer, los elementos que tienen ambos.
  * 
  * 
- * encontrar la interseccion entre dos conjujntos
+ * IDEA:
+ * se agrega todo en un set, 
+ * al leer segunda lista, cuenta repetidos
  * 
+ * se usa unordered_set que tiene .count() en O(1)
  * 
  */
 
 
 #include <iostream>
-#include <set>
-#include <algorithm>
+#include <unordered_set>
+
 
 
 using namespace std;
@@ -42,8 +45,7 @@ int main(){
 
         if(n == 0 && m== 0) return 0;
 
-        set<tint> a;
-        set<tint> b;
+        unordered_set<tint> a;
 
         for(tint i=0; i<n; i++){
             tint cd;
@@ -51,35 +53,15 @@ int main(){
             a.insert(cd);
         }
 
+        tint res= 0;
+
         for(tint i=0; i<m; i++){
             tint cd;
             cin >> cd;
-            b.insert(cd);
+            if(a.count(cd)) res++;
         }
 
-
-        //esta es una forma de usar la libreria, sale ya hecho
-        set<tint> intersection;
-      //  set_intersection(a.begin(), a.end(),b.begin(), b.end(), inserter(intersection, intersection.begin()));
-
-      //de manera manual es:
-
-        if(b.size()> a.size()) swap(a,b);
-
-        for(auto elem:a){
-            if (b.count(elem)){ // true si existe
-                intersection.insert(elem);
-            } 
-        }
-
-       // for(auto x:intersection){ // esto es para imprimir cada cd
-         //   cout<< x;
-
-           // if(x != *intersection.rbegin()){ principio desde la derecha
-             //   cout << " ";
-           // }
-       // }
-        cout << intersection.size() <<"\n";
+        cout << res <<"\n";
     }
 
    return 0;
