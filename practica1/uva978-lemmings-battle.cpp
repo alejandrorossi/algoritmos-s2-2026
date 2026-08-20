@@ -103,20 +103,21 @@ int main(){
             cout<< "blue wins"<< endl;
             size_t size = bs.size();
             for(size_t i=0; i<size; i++){
-                cout << bs.top() << endl;
+                cout << bs.top() <<endl;
                 bs.pop();
-                if(i!= size-1) cout <<endl;
+              //  if(i!= size-1) cout <<endl;
             }
         } else if(bs.empty()){
             cout<< "green wins"<< endl;
             size_t size = gs.size();
             for(size_t i=0; i<size; i++){
-                cout << gs.top();
+                cout << gs.top() <<endl;
                 gs.pop();
-                if(i!= size-1) cout <<endl;
+               // if(i!= size-1) cout <<endl;
             }
         } 
-        cout<<endl;
+        if (N > 0)
+            cout << endl;
 
         
         
