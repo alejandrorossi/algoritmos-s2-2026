@@ -1,5 +1,8 @@
-queue
-not sure
-impossible
-stack
-priority queue
+green and blue died
+
+blue wins
+5
+
+green wins
+10
+10
